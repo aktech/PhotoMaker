@@ -25,6 +25,13 @@ jobs:
         sudo curl -o /usr/local/bin/cog -L "https://github.com/replicate/cog/releases/latest/download/cog_$(uname -s)_$(uname -m)"
         sudo chmod +x /usr/local/bin/cog
 
+    - name: Install pget
+      run: |
+        curl -o /usr/local/bin/pget -L "https://github.com/replicate/pget/releases/download/v0.5.6/pget_linux_x86_64" && chmod +x /usr/local/bin/pget
+
+    - name: Download models
+      run: python scripts/download_models.py
+
     - name: Build the Docker image
       run: cog build
 
