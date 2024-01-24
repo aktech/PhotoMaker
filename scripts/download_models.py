@@ -15,7 +15,7 @@ def download_weights(url, dest, extract=True):
     start = time.time()
     print("downloading url: ", url)
     print("downloading to: ", dest)
-    args = ["pget"]
+    args = ["sudo", "pget"]
     if extract:
         args.append("-x")
     subprocess.check_call(args + [url, dest], close_fds=False)

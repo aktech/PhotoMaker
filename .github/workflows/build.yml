@@ -28,8 +28,6 @@ jobs:
     - name: Install pget
       run: |
         curl -o /usr/local/bin/pget -L "https://github.com/replicate/pget/releases/download/v0.5.6/pget_linux_x86_64" && chmod +x /usr/local/bin/pget
-    - name: Debugging with tmate
-      uses: mxschmitt/action-tmate@v3.17
 
     - name: Download models
       run: python scripts/download_models.py
