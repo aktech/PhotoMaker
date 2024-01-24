@@ -23,6 +23,8 @@ def download_weights(url, dest, extract=True):
 
 
 if __name__ == "__main__":
+    print("Create models directory")
+    subprocess.check_call(["mkdir", "models"], close_fds=False)
     print("Downloading models")
     download_weights(PHOTOMAKER_URL, PHOTOMAKER_PATH, extract=False)
     download_weights(BASE_MODEL_URL, BASE_MODEL_PATH)
