@@ -19,6 +19,3 @@ __pycache__
 # Exclude output files
 /outputs
 output*.png
-
-# Exclude models cache
-/models
