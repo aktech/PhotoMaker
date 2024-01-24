@@ -1,3 +1,7 @@
+import subprocess
+import time
+
+
 SAFETY_CACHE = "./models/safety-cache"
 SAFETY_URL = "https://weights.replicate.delivery/default/sdxl/safety-1.0.tar"
 
