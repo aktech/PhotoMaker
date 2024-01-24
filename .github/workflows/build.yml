@@ -34,6 +34,9 @@ jobs:
         python scripts/download_models.py
         ls models/
 
+    - name: Device Space
+      run: df -h
+
     - name: Build the Docker image
       run: cog build
 
